@@ -86,6 +86,7 @@ jobs:
         with:
           name: Build Output
           path: build-output
+          run: ls -R build-output
       
       - name: Unzip Build Output
         run: |
