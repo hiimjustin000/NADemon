@@ -86,11 +86,11 @@ jobs:
         with:
           name: Build Output
           path: build-output
-          run: ls -R build-output
       
       - name: Unzip Build Output
         run: |
           # Build output has two files, a .geode file and a .pdb file
+          ls -R build-output
           unzip build-output/Build\ Output.zip -d build-output
       
       - name: Create Draft Release
