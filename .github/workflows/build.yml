@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - "publish-branch"
+      - "publish-action"
 
 jobs:
   build:
