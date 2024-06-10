@@ -79,7 +79,7 @@ jobs:
                 await github.rest.git.updateRef({
                   owner,
                   repo,
-                  ref: `tags/${process.env.COMMIT_MESSAGE}`,
+                  ref: `tags/${release.tag_name}`,
                   sha: context.sha,
                   force: true
                 });
