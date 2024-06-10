@@ -76,7 +76,13 @@ jobs:
               if (release.tag_name == process.env.COMMIT_MESSAGE) {
                 console.log("Existing release found, deleting...");
                 await github.rest.repos.deleteRelease({ owner, repo, release_id: release.id });
-                await github.rest.repos.deleteRef({ owner, repo, ref: `tags/${release.tag_name}` });
+                await github.rest.git.updateRef({
+                  owner,
+                  repo,
+                  ref: `tags/${process.env.COMMIT_MESSAGE}`,
+                  sha: context.sha,
+                  force: true
+                });
               }
             }
             console.log("Done.");
