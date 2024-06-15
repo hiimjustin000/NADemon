@@ -1,4 +1,7 @@
 # NA Demon Changelog
+## v1.0.2 (2024-06-14)
+- Finalized the release of v1.0.2
+
 ## v1.0.2-beta.1 (2024-06-08)
 - Fixed a few things
 
